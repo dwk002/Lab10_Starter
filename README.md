@@ -2,11 +2,13 @@
 **Do Kim**
 **Partner: None.**
 
-[GitHub Page](https://dwk002.github.io/Lab10_Starter/)
+[GitHub Airhorn Page](https://dwk002.github.io/Lab10_Starter/)
+
+[GitHub Speech Synthesis Page](https://dwk002.github.io/Lab10_Starter/speechSynth.html)
 
 **Part 1:** 
 
-[Canny Page](cse110-lab10-dwk002.canny.io)
+[Canny Page](https://cse110-lab10-dwk002.canny.io)
 
 **Part 2:** 
 
