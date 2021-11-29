@@ -44,26 +44,25 @@
     </section>
   </main>
   <script>
-    var user = {
-      firstName: 'Bob',
-      lastName: 'Loblaw',
-      key: 'UNIQUE IDENTIFIER',
-      custom: {
-        groups: 'beta_testers'
+    function getRandomString(length) {
+      var randomChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      var result = '';
+      for ( var i = 0; i < length; i++ ) {
+          result += randomChars.charAt(Math.floor(Math.random() * randomChars.length));
       }
+      return result;
+    }     
+    var user = {
+      key: getRandomString(12)
     };
-
-    var div = document.createElement('div');
-    document.body.appendChild(div);
-
-    div.appendChild(document.createTextNode('Initializing...'));
 
     var ldclient = LDClient.initialize('61a441d4e36fa50f6c59ff56', user);
 
     function render() {
       var shouldShow = ldclient.variation('blue-background', false);
-      var label = (shouldShow ? 'Showing' : 'Not showing') + ' your feature to ' + user.key;
-      div.replaceChild(document.createTextNode(label), div.firstChild);
+      if(shouldShow){
+        document.body.className = 'blue';
+      }
     }
 
     ldclient.on('ready', render);

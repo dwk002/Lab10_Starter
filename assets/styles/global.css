@@ -4,6 +4,10 @@
   font-family: sans-serif;
 }
 
+*.fontm {
+  font-family: monospace;
+}
+
 body {
   align-items: center;
   display: grid;
@@ -30,6 +34,7 @@ h2 {
   margin: 0;
   text-align: center;
 }
+
 
 body>header {
   display: grid;

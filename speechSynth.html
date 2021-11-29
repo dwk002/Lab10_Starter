@@ -11,6 +11,7 @@
   <!-- Main Stylesheet & Scripts -->
   <link rel="stylesheet" href="assets/styles/global.css" />
   <script src="assets/scripts/speechSynth.js" type="module"></script>
+  <script src="https://unpkg.com/launchdarkly-js-client-sdk@2"></script>
 </head>
 
 <body>
@@ -22,7 +23,7 @@
   <main>
     <section id="explore">
       <header>
-        <h2>Speech Synthesizer</h2>
+        <h2 id="title1">Speech Synthesizer</h2>
       </header>
       <img src="assets/images/smiling.png" alt="Smiling face" />
       <textarea name="text-to-speak" id="text-to-speak" rows="10" placeholder="Text to speak here"></textarea>
@@ -32,6 +33,35 @@
       <button>Press to Talk</button>
     </section>
   </main>
+  <script>
+    function getRandomString(length) {
+      var randomChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      var result = '';
+      for ( var i = 0; i < length; i++ ) {
+          result += randomChars.charAt(Math.floor(Math.random() * randomChars.length));
+      }
+      return result;
+    }     
+    var user = {
+      key: getRandomString(12)
+    };
+
+    var ldclient = LDClient.initialize('61a441d4e36fa50f6c59ff56', user);
+
+    function render() {
+      var shouldShow = ldclient.variation('monospace-font', false);
+      if(shouldShow){
+        document.querySelector('#title1').className = 'fontm';
+        document.querySelector('button').className = 'fontm';
+        document.querySelector('textarea').className = 'fontm';
+        document.querySelector('select').className = 'fontm';
+        document.querySelector('a').className = 'fontm';
+      }
+    }
+
+    ldclient.on('ready', render);
+    ldclient.on('change', render);
+  </script>
 </body>
 
 </html>
