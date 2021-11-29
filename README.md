@@ -2,4 +2,6 @@
 **Do Kim**
 **Partner: None.**
 
-[Page](https://dwk002.github.io/Lab10_Starter/)
+[GitHub Page](https://dwk002.github.io/Lab10_Starter/)
+
+**Part 1: ** [Canny Page](cse110-lab10-dwk002.canny.io)
