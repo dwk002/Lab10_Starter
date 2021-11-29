@@ -8,7 +8,7 @@
 
 **Part 1:** 
 
-[Canny Page](cse110-lab10-dwk002.canny.io)
+[Canny Page](https://cse110-lab10-dwk002.canny.io)
 
 **Part 2:** 
 
