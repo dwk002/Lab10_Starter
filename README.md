@@ -2,7 +2,8 @@
 **Do Kim**
 **Partner: None.**
 
-[GitHub Page](https://dwk002.github.io/Lab10_Starter/)
+[GitHub Airhorn Page](https://dwk002.github.io/Lab10_Starter/)
+[GitHub Speech Synthesis Page](https://dwk002.github.io/Lab10_Starter/)
 
 **Part 1:** 
 
